@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- night-vision deep green (design appIcon.background): the app's own icon colour in the launcher -->
+    <color name="ic_launcher_background">#FF0B4A34</color>
+</resources>

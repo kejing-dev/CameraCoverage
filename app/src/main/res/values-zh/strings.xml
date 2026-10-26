@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">监控盲区</string>
+    <string name="lang_code">zh</string>
+
+    <string name="mode_workcell">工位</string>
+    <string name="mode_home">看家</string>
+    <string name="action_more">更多</string>
+    <string name="action_undo">撤销</string>
+    <string name="add_camera">加相机</string>
+    <string name="placing">点墙、天花板或桌面… 取消</string>
+    <string name="full">8/8 已满</string>
+    <string name="status_restoring">正在找回上次布置</string>
+    <string name="status_room_pending">房间还在识别…</string>
+    <string name="status_tap_table">点一下桌面放工作区</string>
+    <string name="status_tap_floor">点一下地面放工作区</string>
+    <string name="status_zone_empty">加相机，对准工作区</string>
+    <string name="status_workcell">≥2 台 %1$d%%</string>
+    <string name="status_workcell_blocked">≥2 台 %1$d%% ｜ 你挡住 %2$d 台</string>
+    <string name="status_home_seen">盲区 %1$d%% ｜ 你：%2$s %3$s</string>
+    <string name="status_home_blind">盲区 %1$d%% ｜ 你在盲区</string>
+
+    <string name="mount_wall">墙装</string>
+    <string name="mount_ceiling">吸顶</string>
+    <string name="mount_tripod">三脚架</string>
+    <string name="height_above">离地 %1$s</string>
+    <string name="action_delete">删除</string>
+    <string name="estimate_fov">估算 %1$d° × %2$d°</string>
+    <string name="megapixel">%1$s MP</string>
+    <string name="range_line">%1$s ≤ %2$s · %3$s ≤ %4$s</string>
+    <string name="type_wide">广角</string>
+    <string name="type_standard">标准</string>
+    <string name="type_depth">深度</string>
+    <string name="type_tele">长焦</string>
+    <string name="aim_me">对准我</string>
+    <string name="aim_zone">对准工作区</string>
+    <string name="tripod_height">三脚架高度</string>
+    <string name="action_lower">降低</string>
+    <string name="action_higher">升高</string>
+    <string name="hint_stick">摇杆左右转动</string>
+
+    <string name="action_rotate">转 90°</string>
+    <string name="cm">%1$s cm</string>
+    <string name="zone_verdict">≥2 台 %1$d%% · 0 台 %2$d 格</string>
+
+    <string name="tag_home">%1$d · %2$s ≤ %3$s</string>
+    <string name="tag_work">%1$d · %2$s</string>
+    <string name="tag_depth_ok">%1$d · %2$s</string>
+    <string name="tag_depth_bad">%1$d · %2$s · 超范围</string>
+    <string name="tag_no_zone">%1$d</string>
+    <string name="tag_blocked">%1$d · 挡住 %2$d%%</string>
+
+    <string name="dori_identify">识别</string>
+    <string name="dori_recognize">辨认</string>
+    <string name="dori_observe">观察</string>
+    <string name="dori_detect">探测</string>
+    <string name="dori_blind">盲区</string>
+
+    <string name="lang_system">跟随系统</string>
+    <string name="lang_zh">中文</string>
+    <string name="lang_en">English</string>
+    <string name="menu_clear">全部清除</string>
+    <string name="menu_exit">退出</string>
+
+    <string name="dialog_clear_title">× %1$d · %2$s</string>
+    <string name="dialog_clear_both_title">× %1$d · 两个模式</string>
+    <string name="dialog_clear_body">清除后无法撤销。</string>
+    <string name="dialog_clear_both">两个模式的布置都会删除。</string>
+    <string name="dialog_unavailable">空间能力不可用</string>
+    <string name="dialog_unavailable_body">请在系统设置中允许平面识别和空间锚点。</string>
+    <string name="action_exit">退出</string>
+    <string name="action_retry">重试</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_clear">清除</string>
+
+    <string name="snack_scanning">慢慢看一圈房间</string>
+    <string name="snack_limit">最多 8 台</string>
+    <string name="snack_restored">已找回 %1$d 台</string>
+    <string name="snack_elsewhere">上次的布置不在这里</string>
+    <string name="snack_unsaved">没能保存</string>
+    <string name="snack_lost">定位丢失 · 环顾四周</string>
+    <string name="snack_cleared">已全部清除</string>
+    <string name="snack_in_zone">这里是工作区</string>
+
+    <string name="coach_workcell">站到操作位，看你挡住了哪台</string>
+    <string name="coach_home">走到门口，看你变没变绿</string>
+    <string name="coach_ok">知道了</string>
+</resources>

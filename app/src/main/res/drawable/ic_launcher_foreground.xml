@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher foreground (108 x 108; design appIcon.glyph): a white bullet camera seen from the side, a light-green
+     cone leaving the lens with a person-shaped notch ("are you in it?"), a REC dot. Same shapes as tools/make_icons.py
+     draws for the 3D icon layers and the 512 export. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- cone -->
+    <path android:fillColor="#FF8FF0B6" android:pathData="M50,47 L88,30 L88,74 Z" />
+    <!-- person notch -->
+    <path android:fillColor="#FF0B4A34" android:pathData="M77.5,47m-4,0a4,4 0 1 0 8,0a4,4 0 1 0 -8,0" />
+    <path android:fillColor="#FF0B4A34" android:pathData="M72,62 q0,-8 5.5,-8 q5.5,0 5.5,8 Z" />
+    <!-- bullet camera: hood, body, lens ring, bracket -->
+    <path android:fillColor="#FFFFFFFF" android:pathData="M22,36h34a2,2 0 0 1 2,2v0a2,2 0 0 1 -2,2H22a2,2 0 0 1 -2,-2v0a2,2 0 0 1 2,-2z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M28,41h24a4,4 0 0 1 4,4v4a4,4 0 0 1 -4,4H28a4,4 0 0 1 -4,-4v-4a4,4 0 0 1 4,-4z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M54,43h4v8h-4z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M37,53h4v10h-4z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M31,63h16a2,2 0 0 1 2,2v0a2,2 0 0 1 -2,2H31a2,2 0 0 1 -2,-2v0a2,2 0 0 1 2,-2z" />
+    <!-- REC dot -->
+    <path android:fillColor="#FFFF3B30" android:pathData="M30,47m-2.4,0a2.4,2.4 0 1 0 4.8,0a2.4,2.4 0 1 0 -4.8,0" />
+</vector>
