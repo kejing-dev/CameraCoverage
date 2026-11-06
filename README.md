@@ -6,11 +6,11 @@
 
 **Before drilling any holes, mount virtual cameras on your real walls and next to your real workbench: see where each cone reaches and where the blind spots are, walk to the door to see whether you turn green, and stand at the operator spot to see which camera your body blocks.**
 
-PICO OS 6 · PICO Spatial SDK 6.1.9 · Kotlin / SpatialUI · package `io.embodit.camcoverage` · v0.1.0 (pre-release / 预发布)
+PICO OS 6 · PICO Spatial SDK 6.1.9 · Kotlin / SpatialUI · package `io.embodit.camcoverage` · v0.1.0
 
-> **模拟器 QA 通过，真机未验证（Simulator-QA passed; not yet verified on a real headset）。**
+> **模拟器 QA 通过；头显上已装同一个包，真机体验待验收（Simulator-QA passed; the same APK is installed on a headset, hands-on headset check pending）。**
 
-![封面：工位模式，三台相机从墙、天花板、三脚架照向茶桌上的工作区，绿色半透明视锥，状态行「≥2 台 100%」](docs/cover-S10-workcell.jpg)
+![海报：监控盲区 Camera Coverage](docs/poster.jpg)
 
 > 截图和演示视频来自原生模拟器（PICO Emulator 6.1），由调试广播驱动跳转到各设计状态；**非真实手势录像**。
 > Screenshots and the demo video were taken on the native PICO emulator, driven by debug broadcasts that jump to each design state; **not a recording of real hand gestures.**
@@ -47,14 +47,19 @@ APK 在 [Releases](https://github.com/kejing-dev/CameraCoverage/releases) 页面
 
 ### 截图
 
+![工位覆盖：墙上、天花板、三脚架三台相机照向矮桌上的工作区，状态行「≥2 台 100%」](docs/shot-01.jpg)
+工位覆盖 — 三台相机从墙、天花板、三脚架照向矮桌上的工作区，「≥2 台 100%」
+
 | | |
 |---|---|
-| ![工作区卡：S/M/L、转 90°、格子大小](docs/S05-work-area.jpg) | ![选中相机：黄色视锥、瞄准球和相机卡](docs/S08-camera-card.jpg) |
-| 工作区 — 放在桌上，S / M / L、转 90° | 选中相机 — 视锥变黄，相机卡选镜头、对准我 / 工作区 |
-| ![你挡住了：被挡相机的视锥变红](docs/S11-you-block.jpg) | ![看家空房间：地面墙面全灰](docs/S12-home-empty.jpg) |
-| 你挡住了 — 被身体挡住的相机变红，脚下红圈 | 看家 · 空房间 — 还没相机，地面墙面全是盲区 |
-| ![你被看到：地面墙面变绿](docs/S13-home-seen.jpg) | ![8 台相机：主按钮 8/8 已满](docs/S20-eight-cameras.jpg) |
-| 看家 · 你被看到 — 「你：识别 485 px/m」 | 8 台满了 — 「8/8 已满」 |
+| ![你挡住了：被挡相机的视锥变红](docs/shot-02.jpg) | ![看家·你被看到：地面墙面变绿](docs/shot-03.jpg) |
+| 你挡住了 — 站到操作位，被身体挡住的相机变红，脚下红圈 | 看家 · 你被看到 — 地面墙面按清晰度变绿 |
+| ![选中相机：黄色视锥、瞄准球和相机卡](docs/shot-04.jpg) | ![工作区卡：S/M/L、格子大小](docs/shot-05.jpg) |
+| 选中相机 — 视锥变黄，相机卡换镜头、对准我 / 工作区 | 工作区卡 — S / M / L、格子 20 / 30 / 50 cm |
+| ![看家空房间：地面墙面全灰](docs/shot-06.jpg) | ![8 台相机：主按钮 8/8 已满](docs/shot-07.jpg) |
+| 看家 · 空房间 — 还没相机，地面墙面全是盲区 | 8 台满了 — 「8/8 已满」「最多 8 台」 |
+
+截图 2026-11-05 在 PICO Emulator 6.1（2560 宽、中文界面）上新拍；演示视频（60 秒，Release 附件 `video-01.mp4`）同样由调试广播驱动，**非真实手势录像**。
 
 启动器图标：
 
@@ -69,7 +74,7 @@ APK 在 [Releases](https://github.com/kejing-dev/CameraCoverage/releases) 页面
 - 「空间能力不可用」对话框出来时，相机和视锥也隐藏了（设计只要求控制台禁用）。
 - 离 2 米以外时，编号牌和相机卡上的字很小，走近看就清楚。
 
-还没在头显上验过：真手柄摇杆转相机、捏合拖动瞄准球 / 相机 / 工作区的手感、真人站到操作位和走到门口时的判断（模拟器里用注入的头部位置验）、真实房间的平面质量、关机重开后找回、权限弹窗。
+头显上已装同一个 APK（sha256 一致），还没戴上验过：真手柄摇杆转相机、捏合拖动瞄准球 / 相机 / 工作区的手感、真人站到操作位和走到门口时的判断（模拟器里用注入的头部位置验）、真实房间的平面质量、关机重开后找回、权限弹窗。
 
 ---
 
@@ -103,7 +108,7 @@ Download the APK from the [Releases](https://github.com/kejing-dev/CameraCoverag
 
 ### Screenshots
 
-See the table above: work area, selected camera, you block a camera, empty home, you are seen, eight cameras.
+See the images above: workcell coverage, you block a camera, you are seen at home, selected camera, work-area card, empty home, eight cameras. Retaken on 2026-11-05 on PICO Emulator 6.1 with the Chinese UI; the 60 s demo video (`video-01.mp4` on the Release) is driven by debug broadcasts, not real hand gestures.
 
 ### Known issues (QA round 1, none blocking)
 
@@ -114,10 +119,10 @@ See the table above: work area, selected camera, you block a camera, empty home,
 - When the spatial-features-unavailable dialog shows, cameras and cones are hidden as well (the design only asked to disable the console).
 - Beyond about 2 m the number tags and the camera card are small; walk closer to read them.
 
-Not yet verified on a headset: thumbstick aiming with a real controller, the feel of pinch-dragging the aim ball / cameras / work area, real walking to the operator spot or the door (the emulator used injected head positions), plane quality in a real room, restoring after a reboot, permission prompts.
+The same APK is installed on a headset (matching sha256), but not yet checked hands-on: thumbstick aiming with a real controller, the feel of pinch-dragging the aim ball / cameras / work area, real walking to the operator spot or the door (the emulator used injected head positions), plane quality in a real room, restoring after a reboot, permission prompts.
 
 ---
 
 ## License
 
-Source code © 2026 Embodit. All rights reserved (private repository). Bundled fonts Noto Sans / Noto Sans SC are under the SIL Open Font License, see `third_party/`. DORI thresholds follow IEC EN 62676-4 (public values).
+Source code © 2026 Embodit. All rights reserved (public repository, source available for reading). Bundled fonts Noto Sans / Noto Sans SC are under the SIL Open Font License, see `third_party/`. DORI thresholds follow IEC EN 62676-4 (public values).
