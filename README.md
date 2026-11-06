@@ -33,11 +33,12 @@ PICO OS 6 · PICO Spatial SDK 6.1.9 · Kotlin / SpatialUI · package `io.embodit
 ### 安装与启动
 
 ```bash
-adb install -r CameraCoverage-v0.1.0.apk
+apksigner sign --ks ~/.android/debug.keystore --ks-pass pass:android --out cc-signed.apk CameraCoverage-v0.1.0.apk
+adb install -r cc-signed.apk
 pico-cli app launch io.embodit.camcoverage
 ```
 
-APK 在 [Releases](https://github.com/kejing-dev/CameraCoverage/releases) 页面下载（仓库不含 APK）。需要 PICO OS 6 头显或 PICO Emulator 6.1；用到平面识别和空间锚点。APK 约 34 MB。
+APK 在 [Releases](https://github.com/kejing-dev/CameraCoverage/releases) 页面下载（仓库不含 APK）。它是 `assembleRelease` 的**未签名**包（release 不配 signingConfig，上架时由平台重签名），侧载前先用自己的 debug key 签名，如上。需要 PICO OS 6 头显或 PICO Emulator 6.1；用到平面识别和空间锚点。APK 约 27 MB。
 
 ### 容器与骨架
 
@@ -94,11 +95,12 @@ The layout is saved and found again next time. Chinese and English, m / ft, ever
 ### Install and launch
 
 ```bash
-adb install -r CameraCoverage-v0.1.0.apk
+apksigner sign --ks ~/.android/debug.keystore --ks-pass pass:android --out cc-signed.apk CameraCoverage-v0.1.0.apk
+adb install -r cc-signed.apk
 pico-cli app launch io.embodit.camcoverage
 ```
 
-Download the APK from the [Releases](https://github.com/kejing-dev/CameraCoverage/releases) page (the repository itself does not ship an APK). Needs a PICO OS 6 headset or PICO Emulator 6.1; uses plane detection and spatial anchors. The APK is about 34 MB.
+Download the APK from the [Releases](https://github.com/kejing-dev/CameraCoverage/releases) page (the repository itself does not ship an APK). It is an **unsigned** `assembleRelease` build (no signingConfig; the store re-signs it), so sign it with your own debug key before sideloading, as above. Needs a PICO OS 6 headset or PICO Emulator 6.1; uses plane detection and spatial anchors. The APK is about 27 MB.
 
 ### Container and skeleton
 
